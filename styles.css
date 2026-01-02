@@ -1,11 +1,9 @@
 :root {
-    --couleur-principale: #2c7be5;
-    --couleur-secondaire: #38c172;
-    --couleur-erreur: #e3342f;
-    --font-clair: #f8f9fa;
-    --texte-fonce: #333;
-    
-
+    --couleur-principale: blue;
+    --couleur-secondaire: lightblue;
+    --couleur-erreur: green;
+    --font-clair: red;
+    --texte-fonce: lightgreen;
 }
 
 
@@ -152,4 +150,5 @@ small {
   h1 h2 { font-size: 24px; }
   .menu { flex-direction: column; } /* Aligne le menu verticalement proprement */
 }
+
 
