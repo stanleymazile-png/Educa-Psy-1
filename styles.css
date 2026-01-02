@@ -142,35 +142,7 @@ small {
     margin-bottom: 10px;
 }
 
-
-
-/* ===========================
-   Responsive pour mobile
-=========================== */
 @media (max-width: 600px) {
-    #contactForm {
-        margin: 20px;
-        padding: 20px;
-    }
-
-    input, textarea, button {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    h1, h2 {
-        font-size: 1.5em;
-    }
-
-    button {
-        padding: 15px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+  h1 h2 { font-size: 24px; }
+  .menu { flex-direction: column; } /* Aligne le menu verticalement proprement */
 }
-
-/* Responsive pour mobile */
-
