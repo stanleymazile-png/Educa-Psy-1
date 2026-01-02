@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educa-Psy</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+    <nav>
+        <a href="#acceuil"> Acceuil </a>
+        <a href="#presentation"> Presentation  </a>
+        <a href="#services"> Services </a>
+        <a href="#contact"> Contact </a>
+    </nav>
+    <h1 id="acceuil"> Educa-Psy </h1> 
+   <p> Plateforme d'éducation et de psychologie </p>
+   <section id="presentation">
+    <h2> Qui sommes-nous?</h2>
+    <p> Educa-Psy est une entreprise sociale de services psychologiques et educatifs, supportee par l'Agence Universitaire de la Francophonie, AUF Caraibes </p>
+    <button id="contactBtn"> Contactez-nous </button>
+   </section>
+
+   <section id="services"> 
+    <h2> Nos services </h2>
+    <p> Nous proposons: </p>
+    <ul>
+        <li>
+            Formation
+        </li>
+        <li>
+            Sensibilisation
+        </li>
+        <li>
+            Mentorat pour les jeunes
+        </li>
+        <li>
+            Ventes d'articles
+        </li>
+    </ul>
+   </section>
+
+   <section id="contact"> 
+    <h2> Contactez-nous </h2>
+    <form id="contactform">
+        <label for="name"> Nom </label> <br>
+        <input type="text" id="name" 
+        name="name" placeholder="Votre nom"<br><br>
+        <small id="nameErreur"> </small>
+        <label for="email"> Email </label> <br>
+        <input type="email" id="email" 
+        name="email" placeholder="Votre email"<br><br>
+        <small id="emailErreur"> </small>
+        <label for="message"> Message: </label> <br>
+        <textarea id="message" rows="4" name="message" placeholder="Votre message"></textarea><br><br>
+        <small id="messageErreur"> </small>
+        <button type="submit"> Envoyer
+        </button>
+    </form>
+    <p id="formmessage"></p>
+
+   </section>
+   <script src="script.js"></script>
+</body>
+</html>
