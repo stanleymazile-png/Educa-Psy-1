@@ -141,20 +141,21 @@ small {
     display: block;
     margin-bottom: 10px;
 }
-@media (max-width:600px){
+
+/* Responsive pour mobile */
+@media (max-width: 600px) {
     #contactform {
         margin: 20px;
         padding: 20px;
     }
-    input, textaera, button {
+
+    input, textarea, button {
         font-size: 14px;
         padding: 10px;
     }
-    h1, h2, h3 {
+
+    h1, h2 {
         font-size: 1.5em;
     }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 }
+
