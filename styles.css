@@ -1,23 +1,15 @@
-:root {
-    --couleur-principale: blue;
-    --couleur-secondaire: lightblue;
-    --couleur-erreur: green;
-    --font-clair: red;
-    --texte-fonce: lightgreen;
-}
-
 
 body {
-    background-color: var(--font-clair);
+    background-color: darkblue;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 70px 15px 20px 15px;
     margin-top: 5px;
     margin: 0;
-    color: var(--texte-fonce);
-    line-height: 1.6;
-    
+    color: blue;
+    line-height: 1.6;    
 }
+
 h1 {
     color: darkblue;
     margin-bottom: 10px;
@@ -150,5 +142,6 @@ small {
   h1 h2 { font-size: 24px; }
   .menu { flex-direction: column; } /* Aligne le menu verticalement proprement */
 }
+
 
 
