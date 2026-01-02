@@ -4,13 +4,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 20px;
-    line-height: 1.5;    
-}
+    line-height: 1.5;}
 
 h1 {
     color: darkblue;
-    font-size: 28px;
-}
+    font-size: 28px;}
+
+section p {
+    color: blue ;
+    font-size: 15px;}
+
 section {
     background-color: white;
     border-radius: 20px;
@@ -18,17 +21,13 @@ section {
     rgba(0, 0, 0, 1)
     ;
     width: 100%;
-   box-sizing: border-box;
-}
+   box-sizing: border-box;}
+
 section h2 {
     color: blue;
     margin-bottom: 15px;
-    font-size: 24px;
-}
-section p {
-    color: blue ;
-    font-size: 15px;
-}
+    font-size: 24px;}
+
 button {
     background-color: #1e4ed8;
     color: white;
@@ -37,22 +36,22 @@ button {
     border-radius: 5px;
     font-size: 15px;
     cursor: pointer;
-    transition: 0.3s;
-}
+    transition: 0.3s;}
+
 button:hover {
-    background-color: #3b82f6;
-}
+    background-color: #3b82f6;}
+
 section ul {
     text-align: left;
     margin-left: 20px;
     color: #333333;
-    line-height: 1.5;
-}
+    line-height: 1.5;}
+
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
+    align-items: center;}
+
 section form input, 
 section form textarea {
     width: 80%;
@@ -62,12 +61,11 @@ section form textarea {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s;}
 
-}
 section form button {
-    background-color: #3b82f6;
-}
+    background-color: #3b82f6;}
+
 #contactform {
     max-width: 500px;
     margin: 50px auto;
@@ -75,25 +73,25 @@ section form button {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 5px 15px
-    rgba(0, 0, 0, 1);
-}
-label {
+    rgba(0, 0, 0, 1);}
+
+label {  
    display: block; 
    margin-bottom: 5px;
-   font-weight: bold;
-}
+   font-weight: bold;}
+
 input, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
-}
+    font-size: 14px;}
+
 input :focus, textarea:focus {
 outline: none;
-border-color: var(--couleur-principale);
-}
+border-color: var(--couleur-principale);}
+
 nav {
     background-color: #1e4ed8;
     padding: 10px 5px;
@@ -101,39 +99,39 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-}
+    width: 100%;}
+
 nav a {
     color: white;
     text-decoration: none;
     margin: 0.5px;
     font-weight: bold;
     font-size: 14px;
-    display: inline-block;
-}
+    display: inline-block;}
+
 nav a:hover {
-    text-decoration: underline;
-}
+    text-decoration: underline;}
+
 #formmessage {
     margin-top: 10px;
-    font-weight: bold;
-} 
+    font-weight: bold;} 
+
 #formmessage.succes {
-    color: green;
-}
+    color: green;}
+
 #formmessage.erreur {
-    color: red;
-}
+    color: red;}
+
 small {
     color: red;
     display: block;
-    margin-bottom: 10px;
-}
+    margin-bottom: 10px;}
 
 @media (max-width: 600px) {
-  h1 h2 { font-size: 24px; }
+  h1 h2 { font-size: 24px; }  
   .menu { flex-direction: column; } /* Aligne le menu verticalement proprement */
 }
+
 
 
 
