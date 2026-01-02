@@ -142,9 +142,13 @@ small {
     margin-bottom: 10px;
 }
 
-/* Responsive pour mobile */
+
+
+/* ===========================
+   Responsive pour mobile
+=========================== */
 @media (max-width: 600px) {
-    #contactform {
+    #contactForm {
         margin: 20px;
         padding: 20px;
     }
@@ -157,5 +161,16 @@ small {
     h1, h2 {
         font-size: 1.5em;
     }
+
+    button {
+        padding: 15px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
+
+/* Responsive pour mobile */
 
