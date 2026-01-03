@@ -176,6 +176,22 @@ body {
     #hero-titre { font-size: 26px; }
 }
 
+/* --- TRADUCTION GOOGLE --- */
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body { top: 0px !important; }
+.goog-logo-link { display: none !important; }
+.goog-te-gadget { color: transparent !important; }
+
+#select-langue {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
 
 
 
