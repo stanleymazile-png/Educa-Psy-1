@@ -1,143 +1,87 @@
-/* --- BASE --- */
-body { margin: 0; font-family: Arial, sans-serif; }
+
+/* --- RESET --- */
+body { margin: 0; font-family: sans-serif; overflow-x: hidden; }
 
 /* --- HEADER --- */
 #header {
-    background-color: white;
+    background: white;
+    padding: 10px 5%;
     border-bottom: 2px solid deepskyblue;
     display: flex;
-    flex-direction: column; /* Superpose les deux lignes */
-    padding: 10px 5%;
+    flex-direction: column;
 }
 
-/* Ligne 1 : Logo et Actions */
+/* Ligne 1 : Garde les éléments aux extrémités */
 .header-ligne-haut {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Logo à gauche, Don à droite */
     align-items: center;
     padding-bottom: 10px;
 }
 
 #logoTitre { display: flex; align-items: center; }
-#logo { width: 50px; height: 50px; background-color: lightgray; margin-right: 15px; border-radius: 5px; }
-#titre { color: deepskyblue; margin: 0; font-size: 24px; }
+#logo { width: 40px; height: 40px; margin-right: 10px; background: #eee; }
+#titre { color: deepskyblue; font-size: 1.2rem; margin: 0; }
 
-#header-droite { display: flex; align-items: center; gap: 15px; }
-#select-langue { padding: 5px; border-radius: 5px; border: 1px solid lightgray; outline: none; }
+#header-droite { display: flex; gap: 10px; align-items: center; }
+#btnDon { background: deepskyblue; color: white; padding: 8px 12px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px; }
 
-/* Ligne 2 : Menu et Recherche */
+/* Ligne 2 : Menu à gauche, Recherche à côté */
 .header-ligne-bas {
     display: flex;
     align-items: center;
-    gap: 30px; /* Espace entre le bouton menu et la barre de recherche */
+    gap: 15px;
     padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
 }
 
-/* RECHERCHE */
-.recherche { 
-    display: flex; 
-    align-items: center; 
-    border: 1px solid lightgray; 
-    padding: 5px 15px; 
-    border-radius: 20px; 
-    background-color: #f9f9f9;
+.recherche {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    flex-grow: 1; /* Prend l'espace pour pousser vers le milieu */
+    max-width: 300px;
 }
-#menuRecherche { width: 350px; } /* Barre de recherche assez large */
-#recherche { border: none; outline: none; width: 100%; background: transparent; }
+#recherche { border: none; outline: none; width: 100%; }
 #btnChercher { background: none; border: none; cursor: pointer; }
 
-/* BOUTONS ET MENU */
-#btnDon { 
-    background-color: deepskyblue; 
-    color: white; 
-    text-decoration: none; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    font-weight: bold; 
-}
-
-#btnMenu { 
-    background-color: #eee; 
-    border: none; 
-    padding: 10px 20px; 
-    cursor: pointer; 
-    font-weight: bold; 
-    border-radius: 5px;
-}
-
-/* MENU DÉROULANT */
+/* --- MENU DÉROULANT --- */
 #groupe-menu { position: relative; }
-#liens-deroulants { 
-    display: none; 
-    position: absolute; 
-    left: 0; 
-    top: 110%; 
-    background-color: white; 
-    border: 1px solid lightgray; 
-    width: 200px; 
+#btnMenu { background: #f0f0f0; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; }
+#liens-deroulants {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    width: 150px;
     z-index: 100;
 }
-.item-menu { display: block; padding: 12px; text-decoration: none; color: black; border-bottom: 1px solid #f0f0f0; }
-.item-menu:hover { background-color: deepskyblue; color: white; }
 #liens-deroulants.voir { display: block; }
+.item-menu { display: block; padding: 10px; text-decoration: none; color: black; border-bottom: 1px solid #eee; }
+
+/* --- MOBILE ADAPTATION --- */
+@media screen and (max-width: 600px) {
+    #titre { font-size: 1rem; }
+    #btnDon { padding: 5px 10px; font-size: 12px; }
+    
+    /* Sur mobile, on réduit la barre de recherche pour qu'elle tienne à côté du menu */
+    .recherche { max-width: 180px; }
+}
 
 /* --- HERO --- */
 #hero {
-    background-color: deepskyblue;
-    color: white;
     height: 400px;
+    background: deepskyblue;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-#hero-titre { font-size: 40px; }
-#btnHero {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: white;
-    color: deepskyblue;
-    padding: 15px 30px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-}
 
-
-/* --- ADAPTATION MOBILE --- */
-@media screen and (max-width: 768px) {
-    
-    /* On empile tout verticalement */
-    .header-ligne-haut, .header-ligne-bas {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    /* La recherche prend toute la largeur sur mobile */
-    #menuRecherche {
-        width: 100%;
-    }
-
-    #recherche {
-        width: 100%;
-    }
-
-    /* On centre le logo et le titre */
-    #logoTitre {
-        justify-content: center;
-        width: 100%;
-    }
-
-    /* Le Hero : on diminue la taille du texte pour qu'il ne dépasse pas */
-    #hero-titre {
-        font-size: 28px;
-    }
-    
-    #hero {
-        height: 300px; /* Moins haut sur mobile */
-    }
-}
 
 
 
