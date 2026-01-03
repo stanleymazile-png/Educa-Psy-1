@@ -1,11 +1,15 @@
-const bouton = document.getElementById('bouton-mobile');
-const menu = document.getElementById('menu-principal');
+const btnMenu = document.getElementById('btnMenu');
+const liens = document.getElementById('liens-deroulants');
 
-// Au clic, on change le nom de la classe pour montrer/cacher
-bouton.onclick = function() {
-    if (menu.className === "affiche") {
-        menu.className = "";
-    } else {
-        menu.className = "affiche";
-    }
+// Gérer l'ouverture du menu
+btnMenu.onclick = function(e) {
+    liens.classList.toggle('voir');
+    e.stopPropagation();
 };
+
+// Fermer le menu si on clique ailleurs sur la page
+window.onclick = function() {
+    liens.classList.remove('voir');
+};
+
+
