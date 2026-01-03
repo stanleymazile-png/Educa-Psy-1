@@ -12,4 +12,4 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_EDUCA_PSY }}"
           projectId: educa-psy
         env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels
+          FIREBASE_CLI
