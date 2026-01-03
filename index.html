@@ -3,36 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educa-Psy</title>
+    <title>Educa-Psy | Accueil</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header id="entete">
-        <section id="barre-navigation">
-            
-            <section id="bloc-logo">
-                <h2 id="titre-logo">Educa-Psy</h2>
-                <p id="slogan-logo">Pour chaque enfant, l'éducation.</p>
+    <header id="header">
+        <div class="header-ligne-haut">
+            <section id="logoTitre">
+                <img src="" alt="Logo" id="logo"> 
+                <h2 id="titre">Educa-Psy</h2>
             </section>
-            
-            <button id="bouton-mobile">☰</button>
 
-            <nav id="menu-principal">
-                <a href="index.html" id="lien-accueil">Accueil</a>
-                <a href="presentation.html" id="lien-presentation">Présentation</a>
-                <a href="services.html" id="lien-services">Services</a>
-                <a href="boutique.html" id="lien-boutique">Boutique</a>
-                <a href="contact.html" id="lien-contact">Contact</a>
-                <a href="don.html" id="bouton-don">Faire un don</a>
-            </nav>
-            
-        </section>
+            <section id="header-droite">
+                <select id="select-langue">
+                    <option value="fr">Français</option>
+                    <option value="kr">Kreyòl</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+                <a href="don.html" id="btnDon">Faire un don</a>
+            </section>
+        </div>
+
+        <div class="header-ligne-bas">
+            <section id="groupe-menu">
+                <button id="btnMenu">☰ Menu</button>
+                <nav id="liens-deroulants">
+                    <a href="index.html" class="item-menu">Accueil</a>
+                    <a href="presentation.html" class="item-menu">Présentation</a>
+                    <a href="services.html" class="item-menu">Services</a>
+                    <a href="boutique.html" class="item-menu">Boutique</a>
+                    <a href="contact.html" class="item-menu">Contact</a>
+                </nav>
+            </section>
+
+            <section id="menuRecherche" class="recherche">
+                <input type="text" id="recherche" placeholder="Rechercher...">
+                <button id="btnChercher">🔍</button>
+            </section>
+        </div>
     </header>
+
+    <section id="hero">
+        <div id="hero-contenu">
+            <h1 id="hero-titre">L'éducation pour chaque enfant</h1>
+            <p id="hero-sous-titre">Accompagnement psychologique et pédagogique spécialisé.</p>
+            <a href="services.html" id="btnHero">Découvrir nos services</a>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
