@@ -104,6 +104,43 @@ body { margin: 0; font-family: Arial, sans-serif; }
 }
 
 
+/* --- ADAPTATION MOBILE --- */
+@media screen and (max-width: 768px) {
+    
+    /* On empile tout verticalement */
+    .header-ligne-haut, .header-ligne-bas {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* La recherche prend toute la largeur sur mobile */
+    #menuRecherche {
+        width: 100%;
+    }
+
+    #recherche {
+        width: 100%;
+    }
+
+    /* On centre le logo et le titre */
+    #logoTitre {
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Le Hero : on diminue la taille du texte pour qu'il ne dépasse pas */
+    #hero-titre {
+        font-size: 28px;
+    }
+    
+    #hero {
+        height: 300px; /* Moins haut sur mobile */
+    }
+}
+
+
+
 
 
 
