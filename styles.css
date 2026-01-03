@@ -1,80 +1,109 @@
+/* --- BASE --- */
+body { margin: 0; font-family: Arial, sans-serif; }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+/* --- HEADER --- */
+#header {
+    background-color: white;
+    border-bottom: 2px solid deepskyblue;
+    display: flex;
+    flex-direction: column; /* Superpose les deux lignes */
+    padding: 10px 5%;
 }
 
-#barre-navigation {
+/* Ligne 1 : Logo et Actions */
+.header-ligne-haut {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: white;
-    border-bottom: 2px solid deepskyblue;
+    padding-bottom: 10px;
 }
 
-#titre-logo {
-    margin: 0;
-    color: deepskyblue;
+#logoTitre { display: flex; align-items: center; }
+#logo { width: 50px; height: 50px; background-color: lightgray; margin-right: 15px; border-radius: 5px; }
+#titre { color: deepskyblue; margin: 0; font-size: 24px; }
+
+#header-droite { display: flex; align-items: center; gap: 15px; }
+#select-langue { padding: 5px; border-radius: 5px; border: 1px solid lightgray; outline: none; }
+
+/* Ligne 2 : Menu et Recherche */
+.header-ligne-bas {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espace entre le bouton menu et la barre de recherche */
+    padding-top: 10px;
 }
 
-#slogan-logo {
-    margin: 0;
-    font-size: 11px;
-    color: gray;
+/* RECHERCHE */
+.recherche { 
+    display: flex; 
+    align-items: center; 
+    border: 1px solid lightgray; 
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    background-color: #f9f9f9;
+}
+#menuRecherche { width: 350px; } /* Barre de recherche assez large */
+#recherche { border: none; outline: none; width: 100%; background: transparent; }
+#btnChercher { background: none; border: none; cursor: pointer; }
+
+/* BOUTONS ET MENU */
+#btnDon { 
+    background-color: deepskyblue; 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-weight: bold; 
 }
 
-#menu-principal a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    margin-left: 15px;
+#btnMenu { 
+    background-color: #eee; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    border-radius: 5px;
 }
 
-#bouton-don {
+/* MENU DÉROULANT */
+#groupe-menu { position: relative; }
+#liens-deroulants { 
+    display: none; 
+    position: absolute; 
+    left: 0; 
+    top: 110%; 
+    background-color: white; 
+    border: 1px solid lightgray; 
+    width: 200px; 
+    z-index: 100;
+}
+.item-menu { display: block; padding: 12px; text-decoration: none; color: black; border-bottom: 1px solid #f0f0f0; }
+.item-menu:hover { background-color: deepskyblue; color: white; }
+#liens-deroulants.voir { display: block; }
+
+/* --- HERO --- */
+#hero {
     background-color: deepskyblue;
-    color: white !important;
-    padding: 8px 15px;
-    border-radius: 20px;
+    color: white;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-
-#bouton-mobile {
-    display: none;
-    background: none;
-    border: none;
+#hero-titre { font-size: 40px; }
+#btnHero {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: white;
     color: deepskyblue;
-    font-size: 25px;
-    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Version pour Téléphone */
-@media (max-width: 768px) {
-    #bouton-mobile {
-        display: block;
-    }
 
-    #menu-principal {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        text-align: center;
-        padding-bottom: 20px;
-        border-bottom: 1px solid lightgray;
-    }
-
-    /* Activé par le JavaScript */
-    #menu-principal.affiche {
-        display: flex;
-    }
-
-    #menu-principal a {
-        margin: 10px 0;
-    }
-}
 
 
 
